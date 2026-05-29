@@ -1,0 +1,23 @@
+[package]
+name = "hackernews-mcp"
+version = "0.1.0"
+edition = "2021"
+description = "A stdio MCP server exposing read-only Hacker News tools (Firebase + Algolia)."
+license = "MIT"
+repository = "https://github.com/devrelopers/hackernews-mcp"
+
+[[bin]]
+name = "hackernews-mcp"
+path = "src/main.rs"
+
+[dependencies]
+rmcp = { version = "1.7", features = ["transport-io"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+futures = "0.3"
+chrono = { version = "0.4", default-features = false, features = ["std"] }
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
