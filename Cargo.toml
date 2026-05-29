@@ -2,9 +2,13 @@
 name = "hackernews-mcp"
 version = "0.1.0"
 edition = "2021"
-description = "A stdio MCP server exposing read-only Hacker News tools (Firebase + Algolia)."
+description = "A stdio Model Context Protocol (MCP) server exposing read-only Hacker News tools — browse story feeds, read capped comment trees, look up users, and full-text search via the official Firebase and Algolia APIs. For use with Claude Desktop and Claude Code."
 license = "MIT"
 repository = "https://github.com/devrelopers/hackernews-mcp"
+readme = "README.md"
+authors = ["DevRelopers <hello@devrelopers.io>", "David Liedle <david.liedle@gmail.com>"]
+keywords = ["mcp", "hackernews", "hacker-news", "api-bindings", "cli"]
+categories = ["command-line-utilities", "api-bindings"]
 
 [[bin]]
 name = "hackernews-mcp"
